@@ -1,78 +1,80 @@
-# Rocktly: Rocket launches schedule (Work in progress 🚧👷🏗️‍️)
+# Cosmos
 
-🚨 App is currently being rewritten to compose 🚨
+> [Join our Internship Program now](http://internship.opengenus.org/) | Try this cool [One Liner knowledge tool](https://iq.opengenus.org/one/)
 
-An android app that shows timeline of upcoming rocket launches. Showcases architecture of a real android application and usage of some libraries. Application loads data about rocket launches from the server and stores them to the database for off-line usage.
+> The universe of algorithm and data structures
 
-### Screenshots
+**Cosmos** is your personal offline collection of every algorithm and data structure one will ever encounter and use in a lifetime. This provides solutions in various languages spanning `C`, `C++`, `Java`, `JavaScript`, `Swift`, `Python`, `Go` and others.
 
-| ![Timeline](./screenshots/timeline_light.png) | ![Filter](./screenshots/filter_light.png) | ![Launch detail](./screenshots/detail_light_a.png) |
-| ---------------------------------------------------- | ---------------------------------------------------- | ---------------------------------------------------- |
-| ![Timeline](./screenshots/timeline_dark.png) | ![Launch detail](./screenshots/detail_dark_a.png) | ![Launch detail](./screenshots/detail_dark_c.png) |
+This work is maintained by a community of hundreds of people and is a _massive collaborative effort_ to bring the readily available coding knowledge **offline**.
 
-### Goals
+> **Many coders ask me how to improve their own performances. I cannot say anything except "solve and review and prepare your library"** - _Uwi Tenpen_
 
-- Modularize the application into modules `App` and `Domain`. `Domain` module has no android dependencies.
-- Focus on testability with unit tests and UI tests. For UI tests is used the Espresso library with the [Robot pattern](https://academy.realm.io/posts/kau-jake-wharton-testing-robots/) which allows to create clear and understandable tests.
-- Use kotlin coroutines for asynchronous jobs.
+Make your fundamentals in Algorithms and Data Structure with these free resources:
 
-### Libraries Used
+* [**50+** Linked List Problems](https://iq.opengenus.org/list-of-linked-list-problems/)
+* [**50+** Array Problems](https://iq.opengenus.org/list-of-array-problems/)
+* [**50+** Binary Tree Problems](https://iq.opengenus.org/list-of-binary-tree-problems/)
+* [**100+** Dynamic Programming (DP) Problems](https://iq.opengenus.org/list-of-dynamic-programming-problems/)
 
-- [ViewModel](https://developer.android.com/topic/libraries/architecture/viewmodel) - Store UI-related data that isn't destroyed on app rotations.
-- [Room](https://developer.android.com/topic/libraries/architecture/room) - Store launch data received from the server in SQLite database.
-- [Data Binding](https://developer.android.com/topic/libraries/data-binding/) - Declaratively bind observable data to UI elements.
-- [Lifecycles](https://developer.android.com/topic/libraries/architecture/lifecycle) - Handle events from ViewModel to Fragments/Activity.
-- [WorkManager](https://developer.android.com/topic/libraries/architecture/workmanager) - Used for periodic data fetching from server and for showing Android notification of upcoming launch.
-- [Navigation](https://developer.android.com/topic/libraries/architecture/navigation/) - Handle everything needed for navigation between fragments and creation of deep links.
-- [Kotlin Coroutines](https://kotlinlang.org/docs/reference/coroutines-overview.html) For managing asynchronous calls with simplified code and reducing needs for callbacks. For event based code are used `Flow`-s and `Channel`-s.
-- Dependency injection
-  - [Dagger 2](https://github.com/google/dagger) Creates dependency graph for most object in the application.
-  - [Assited-Inject](https://github.com/square/AssistedInject) Easier creation of objects that combine parameterization and dependencies. Mainly used with ViewModels.
+# Cosmic Structure
 
-- [Material components](https://github.com/material-components/material-components-android) Application uses material theme for easier styling of UI components and for dark theme.  
+Following is the high-level structure of cosmos:
+* [Artificial intelligence](/code/artificial_intelligence) :robot:
+* [Backtracking](/code/backtracking)
+* [Bit manipulation](/code/bit_manipulation)
+* [Cellular automaton](/code/cellular_automaton) 🐚
+* [Compression algorithms](/code/compression) 🗜️
+* [Computational geometry](/code/computational_geometry) :gear:
+* [Cryptography](/code/cryptography)
+* [Data structures](/code/data_structures)
+* [Design pattern](/code/design_pattern)
+* [Divide conquering](/code/divide_conquer) ➗
+* [Dynamic programming](/code/dynamic_programming)
+* [Graph algorithms](/code/graph_algorithms) 📈
+* [Greedy algorithms](/code/greedy_algorithms) 💰
+* [Mathematical algorithms](/code/mathematical_algorithms)  :1234:
+* [Networking](/code/networking)  :globe_with_meridians:
+* [Numerical analysis](/code/numerical_analysis)  :chart_with_upwards_trend:
+* [Online challenges](/code/online_challenges)
+* [Operating system](/code/operating_system) 💻
+* [Quantum algorithms](/code/quantum_algorithms)  :cyclone:
+* [Randomized algorithms](/code/randomized_algorithms)  :slot_machine:
+* [Searching](/code/search) 🔎
+* [Selecting](/code/selection_algorithms)
+* [Sorting](/code/sorting)
+* [Square root decomposition](/code/square_root_decomposition)
+* [String algorithms](/code/string_algorithms) 🧵
+* [Unclassified](/code/unclassified) 👻
 
-### Getting started
+Each type has several hundreds of problems with solutions in several languages spanning `C`, `C++`, `Java`, `Python`, `Go` and others.
 
-- Server for app isn't currently running publicly. App should work even without server, when is build with parameter `use_fake_reponse_api=true` in the `gradle.properiets`. In this case the response is generated from static JSON from the assets.
+# Maintainers
 
-#### Gradle tasks
+This is a massive collaboration. Hence, to keep the quality intact and drive the vision in the proper direction, we have maintainers.
 
-- run UI tests on connected device:
-`./gradlew connectedDebugAndroidTest`
+> Maintainers are your friends forever. They are vastly different from moderators.
 
-- run unit tests:
-`./gradlew testDebugUnitTest`
+Currently, we have **5 active maintainers** and we are expanding quickly.
 
-- assemble apk:
-`./gradlew assembleDebug`
+The task of maintainers is to review pull requests, suggest further quality additions and keep the work up to date with the current state of the world. 🌍
 
-#### Environment variables (optional)
+[Check out our current maintainers](https://github.com/OpenGenus/cosmos/wiki/maintainers)
 
-- `SPACE_APP_KEYSTORE_PASSWORD`
+# Contributors
 
-- `SPACE_APP_KEY_PASSWORD`
+The success of our vision to bring knowledge offline depends on you. Even a small contribution helps. All forms of contributions are highly welcomed and valued.
 
-- `SPACE_APP_KEYSTORE_PATH`
+Currently, we have over **1000+ contributors** in Cosmos and **over 2K+ contributors** in sister projects of Cosmos.
 
-- `SPACE_APP_API_KEY` - key will be used for communication with server, but is recommended for now to use `use_fake_reponse_api=true ` parameter in the `gradle.properiets`.
+When you contribute, your name with a link (if available) is added to our [contributors list](https://github.com/OpenGenus/cosmos/wiki/contributors).
 
-- `SPACE_APP_GOOGLE_MAPS_KEY` - use a google maps api key and replace google-services.json file, if you want to show the map in the Launch detail.
+You can contribute by writing `code`, documentation in the form of `installation guides` and `style guides`, making Cosmos search friendly and many others. There are endless possibilities.
 
+Additionally, you might want to take a look at this [contributing guidelines](https://github.com/OpenGenus/cosmos/wiki/contribute) before you make Cosmos better.
 
-### License
+You may, also, refer to the available [style guides](/guides/coding_style) before contributing code.
 
-```
-Copyright 2014 Valter Kasper
+# License
 
-Licensed under the Apache License, Version 2.0 (the "License");
-you may not use this file except in compliance with the License.
-You may obtain a copy of the License at
-
-   http://www.apache.org/licenses/LICENSE-2.0
-
-Unless required by applicable law or agreed to in writing, software
-distributed under the License is distributed on an "AS IS" BASIS,
-WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-See the License for the specific language governing permissions and
-limitations under the License.
-```
+We believe in freedom and improvement. [GNU General Public License v3.0](https://github.com/OpenGenus/cosmos/blob/master/LICENSE)

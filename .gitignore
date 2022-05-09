@@ -1,14 +1,4 @@
-*.iml
-.gradle
-/local.properties
-/.idea
-/app/release
-/app/schemas
-/app/fabric.properties
+**/*.vscode
+**/*.netrwhist
 .DS_Store
-/build
-/captures
-.externalNativeBuild
-keystore.properties
-fabri
-/projectFilesBackup/.idea/workspace.xml
+.replit
