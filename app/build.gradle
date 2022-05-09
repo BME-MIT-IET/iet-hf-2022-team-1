@@ -12,7 +12,7 @@ plugins {
 android {
     signingConfigs {
         config {
-            storeFile file('your_key_store_path')
+            storeFile file(System.getenv("SPACE_APP_KEYSTORE_PATH"))
             final def keystorePath = System.getenv("SPACE_APP_KEYSTORE_PATH")
             if (keystorePath != null && !keystorePath.isEmpty()) {
                 final def keystoreFile = file(keystorePath)
