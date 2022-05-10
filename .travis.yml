@@ -81,3 +81,13 @@ matrix:
 
 before_install:
    - eval "${MATRIX_EVAL}"
+
+addons:
+  sonarcloud:
+    organization: "bme-mit-iet-org"
+    token:
+      secure: "FxQDCs18eITG8aWaOBNN9bWSrNUi6BuFtY3fCAelLkM8ZTBTI+rgHP2tloLT/JcEmFhAsL5yQz5PrRs2x0OGBDAg5KWMVfVDnQ3AAglwAQ375zQZHT1fNBJHcAznTFJzU3b60X2H+gBkV3ENmrJxpphfgI8di7rPlx9eO2Sql0NEMBisLpXVo34nx9hdbFVf/Nup8JR9GlwmQkWFM0vVAnV7oHWmSDXPjMAWHb36guq3INGQgkGook8EjFQukjCw5iLLXyqeHBRpf/mnH0UTrlmwDiHq6BRtJdFQ+qOYkoAp6AYf887lw5tAORuR0+As3OI91UAqCRRWh92TlfaZ4iqIcQMX8jfraCMIQHfPmdpvL0TX/mRtteQMb1BS61jss4yzbIqkKxOaCVq+XKzkWtbQBvJPrnYyBwPjPCHrSg59Br0cNkLN08856c7CfWY8t2mDybgvuqOf22vVi6WYArZqrztkDSDtwrCtA0DuYCgpZ13isDxKM6qBhlhsC/EwUvrN9vzug544+eWE2e/lLE8R30N7VnREhanwsln4FdY0nDQeO/6kzHMaVjy8gQqHI8wk9qQSqwtaQvhBXVAlv6VpY9Z/y2JXib2K2JAK7azI9eS1BT7O5/Uc9i7guS6WLdEnPl/DiDLN95PI/plex/B8Qprhc8kuatnCN2JuTE8=" # encrypted value of your token
+
+script:
+  # the following command line builds the project, runs the tests with coverage and then execute the SonarCloud analysis
+  - mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent install sonar:sonar
