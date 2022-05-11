@@ -132,16 +132,15 @@ namespace LinkedList
         // ToString method
         public override string ToString()
         {
-            string s = "";
             Node<T> node = head;
-
+            StringBuilder bld = new StringBuilder();
             while(node != null || node.getNextNode() != null)
             {
-                s += node.getValue().ToString() + '\n';
+                bld.Append(node.getValue().ToString() + '\n');
                 node.setNext();
             }
 
-            return s;
+            return bld.ToString();
         }
 
         // returns the head node

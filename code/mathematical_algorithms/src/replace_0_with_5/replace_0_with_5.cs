@@ -6,16 +6,16 @@ namespace Replace
     {
         private static string replace(string number)
         {
-            string N = "";
+            StringBuilder bld = new StringBuilder();
             foreach (char n in number)
             {
                 if (n == '0')
                 {
-                    N += '5';
+                    bld.Append('5');
                 }
                 else
                 {
-                    N += n;
+                    bld.Append(n);
                 }
             }
             return N;

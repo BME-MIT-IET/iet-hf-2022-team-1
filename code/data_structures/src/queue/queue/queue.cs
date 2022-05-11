@@ -103,21 +103,21 @@ namespace Cosmos_Data_Structures
         public override string ToString()
         {
             Node tmp = front;
-            string result = "Queue([Front] ";
+            StringBuilder bld = new StringBuilder();
+            bld.Append("Queue([Front] ");
 
             while(tmp != null)
             {
-                result += tmp.data;
+                bld.Append(tmp.data);
                 tmp = tmp.next;
 
                 if (tmp != null)
                 {
-                    result += " -> ";
+                    bld.Append(" -> ");
                 }
             }
-
-            result += " [Back])";
-            return result;
+            bld.Append(" [Back])");
+            return bld.ToString();
         }
     }
 
