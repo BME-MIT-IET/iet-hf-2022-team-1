@@ -17,7 +17,6 @@ namespace Cosmos
 		[Fact]
 		public void TestCreation()
 		{
-			//var words = new[] {"abc", "abgl", "cdf", "abcd", "lmn"};
 			var words = new[] {"abc", "abgl"};
 
 			TrieNode root = _trieBuilder.BuildTrie(words);
