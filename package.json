@@ -1,8 +1,24 @@
 {
-  "type":"module",
+  "type": "module",
   "dependencies": {
+    "c8": "^7.11.2",
     "chai": "^4.3.6",
-    "mocha": "^10.0.0",
-    "nyc": "^15.1.0"
+    "mocha": "^10.0.0"
+  },
+  "scripts": {
+    "test_sorting": "mocha .\\code\\sorting\\test\\ --recursive",
+    "code_coverage_sorting": "c8 npm run test_sorting"
+  },
+  "c8": {
+    "extension": [
+      ".js"
+    ],
+    "reporter": [
+      "text",
+      "html"
+    ],
+    "exclude": [
+      ".\\code\\sorting\\test\\bubble_sort\\*.js"
+    ]
   }
 }
