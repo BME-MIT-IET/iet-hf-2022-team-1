@@ -3,3 +3,4 @@
 .DS_Store
 .replit
 node_modules/
+coverage/
