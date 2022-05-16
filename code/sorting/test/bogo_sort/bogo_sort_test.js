@@ -18,4 +18,12 @@ describe('bogo sort algorithm', () => {
 
         expect(sorted).to.be.eql([1, 2, 2, 3, 3, 4, 4, 4, 5, 5]);
     });
+
+    it('should return a sorted array given an array with duplicate and negative elements', () => {
+        const array = [3, 2, -4, 2, 3, 3, 1, 5, -4, -1];
+
+        const sorted = bogosort(array);
+
+        expect(sorted).to.be.eql([-4, -4, -1, 1, 2, 2, 3, 3, 3, 5]);
+    });
 });
