@@ -45,9 +45,9 @@ export const cycleSort = array => {
       array[pos] = record;
       record = swap;
     }
-
-    return array;
   }
+  
+  return array;
 };
 
 console.log(cycleSort([3, 2, 1, 4]));
