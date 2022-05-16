@@ -3,6 +3,14 @@ import { bucketSort } from '../../src/bucket_sort/bucket_sort.js'
 
 describe('bucket sort algorithm', () => {
 
+    it('should return the given array, if the array is empty', () => {
+        const array = [];
+
+        const sorted = bucketSort(array);
+
+        expect(sorted).to.be.eql([]);
+    });
+
     it('should return a sorted array given all elemenents are unique', () => {
         const array = [5, 8, 10, 2, 7, 1, 4, 3, 9, 6];
 
