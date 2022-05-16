@@ -64,6 +64,8 @@ export function radixBucketSort(arr) {
     }
     buckets = {};
   }
+
+  return arr;
 }
 radixBucketSort(testArray);
 console.dir(testArray);
