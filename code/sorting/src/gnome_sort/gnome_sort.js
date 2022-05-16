@@ -8,9 +8,11 @@ export function gnomeSort(arr) {
       arr[index - 1] = tmp;
       --index;
     } else {
-      --index;
+      ++index;
     }
   }
+
+  return arr;
 }
 
 // test case
