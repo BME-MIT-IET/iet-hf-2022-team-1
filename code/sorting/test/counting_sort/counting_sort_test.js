@@ -22,7 +22,7 @@ describe('counting sort algorithm', () => {
     it('should return a sorted array given an array with duplicate and negative elements', () => {
         const array = [4, -4, -3, -2, 1, -1, -1, -2, -3, -5, 1, -2, 1, -3, 0, 2, 1, 4, -3, -2];
 
-        const sorted = countingSort(array);
+        const sorted = countingSort(array, -5, 5);
 
         expect(sorted).to.be.eql([-5, -4, -3, -3, -3, -3, -2, -2, -2, -2, -1, -1, 0, 1, 1, 1, 1, 2, 4, 4]);
     });
