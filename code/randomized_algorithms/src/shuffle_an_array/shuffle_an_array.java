@@ -1,11 +1,11 @@
 // Part of Cosmos by OpenGenus Foundation 
+package code.randomized_algorithms.src.shuffle_an_array;
 
 import java.util.Random;
-import java.util.Arrays;
 
-public class Shuffle_An_Array
+public class shuffle_an_array
 {
-  static void randomizing(int array[], int n)
+  public static void randomizing(int array[], int n)
   {
 	  Random r  = new Random();
 	  for(int i = n-1;i>0;i--)
@@ -15,7 +15,7 @@ public class Shuffle_An_Array
 		  array[i] = array[j];
 		  array[j] = temp;
 	  }
-	  System.out.println(Arrays.toString(array));
+	  //System.out.println(Arrays.toString(array));
   }
 public static void main(String[]args)
 {
