@@ -3,7 +3,7 @@
  * @param {Array} - array of ints
  * @returns {Array} - sorted array of ints
  */
-function pigeonholeSort(array) {
+export function pigeonholeSort(array) {
   // Figure out the range. This part isn't really the algorithm, it's
   // figuring out the parameters for it.
   const max = Math.max(...array);
