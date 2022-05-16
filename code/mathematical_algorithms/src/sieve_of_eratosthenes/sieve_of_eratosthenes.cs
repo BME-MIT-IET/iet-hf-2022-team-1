@@ -27,8 +27,9 @@ namespace OpenGenus
   			for (var i = 2; i <= lenRoot; i++)
   			{
 				// skip numbers already blanked by a prime factor
-  				if (numbers[i] == 0)
-  					continue;
+  				if (numbers[i] == 0){
+					  continue;
+				  }
 
   				for (int j = i * i; j < numbers.Length; j += i)
   				{

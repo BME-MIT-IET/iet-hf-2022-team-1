@@ -10,8 +10,9 @@ namespace CountSetBits
             int count = 0;
             foreach (char bit in bin)
             {
-                if(bit == '1')
+                if(bit == '1'){
                     count++;
+                }
             }
             return count;
         }

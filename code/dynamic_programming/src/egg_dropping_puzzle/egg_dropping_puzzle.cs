@@ -14,13 +14,16 @@ class cosmos {
 		// no trials needed. OR if there
 		// is one floor, one trial needed.
     
-		if (k == 1 || k == 0)
+		if (k == 1 || k == 0){
 			return k;
+		}
+			
 
 		// We need k trials for one egg
 		// and k floors
-		if (n == 1)
+		if (n == 1){
 			return k;
+		}
 
 		int min = int.MaxValue;
 		int x, res;

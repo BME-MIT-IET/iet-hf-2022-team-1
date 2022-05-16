@@ -19,8 +19,9 @@ namespace AES
             byte tmp = bytes[0];
             int i;
 
-            for(i = 0; i < bytes.Length - 1; ++i)
+            for(i = 0; i < bytes.Length - 1; ++i){
                 bytes[i] = bytes[i + 1];
+            }
 
             bytes[i] = tmp;
         }

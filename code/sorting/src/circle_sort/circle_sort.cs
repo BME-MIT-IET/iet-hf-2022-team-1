@@ -8,7 +8,7 @@ namespace CircleSort
     {
         public static void Main()
         {
-            var sortedArray = Sort(new int[]{2, 14, 4, 6, 8, 1, 5, 3, 7, 11, 0, 13, 20, -1});
+            var sortedArray = Sort(new []{2, 14, 4, 6, 8, 1, 5, 3, 7, 11, 0, 13, 20, -1});
             Console.WriteLine(String.Join(", ", sortedArray));
         }
 

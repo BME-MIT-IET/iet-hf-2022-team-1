@@ -37,8 +37,9 @@ public class Graph
 		foreach(int i in adj[v]) 
 		{ 
 			int n = i; 
-			if (!visited[n]) 
+			if (!visited[n]){
 				DFSUtil(n, visited); 
+			}
 		} 
 	} 
 

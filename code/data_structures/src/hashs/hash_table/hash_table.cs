@@ -49,9 +49,9 @@ namespace hashtables
         }
         internal void show()
         {
-            foreach(var key in hashtable.Keys)
+            foreach(var keyValue in hashtable.Keys)
             {
-                Console.WriteLine(key.ToString() + " : " + hashtable[key]);
+                Console.WriteLine(keyValue.ToString() + " : " + hashtable[keyValue]);
             }
         }
 
