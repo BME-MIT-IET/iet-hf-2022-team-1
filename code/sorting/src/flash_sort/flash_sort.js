@@ -1,6 +1,6 @@
 "use strict";
 
-function flash_sort(arr) {
+export function flash_sort(arr) {
   let max = 0;
   let min = arr[0];
   const n = arr.length;
