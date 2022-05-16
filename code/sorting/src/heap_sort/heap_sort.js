@@ -42,4 +42,6 @@ export function heapSort(inputArray) {
     arrayLength--;
     heap_root(inputArray, 0);
   }
+
+  return inputArray;
 }
