@@ -1,5 +1,5 @@
 // Part of Cosmos by OpenGenus Foundation
-function stoogeSort(a) {
+export function stoogeSort(a) {
   function sort(left, right) {
     if (a[left] > a[right]) {
       [a[left], a[right]] = [a[right], a[left]];
