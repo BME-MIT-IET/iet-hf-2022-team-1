@@ -1,6 +1,6 @@
 var a = [34, 203, 3, 746, 200, 984, 198, 764, 9];
 // Part of Cosmos by OpenGenus Foundation
-function mergeSort(arr) {
+export function mergeSort(arr) {
   if (arr.length < 2) return arr;
 
   var middle = parseInt(arr.length / 2);
@@ -28,4 +28,4 @@ function merge(left, right) {
   return result;
 }
 
-console.log(mergeSort(a));
+//console.log(mergeSort(a));

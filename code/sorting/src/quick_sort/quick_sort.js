@@ -10,7 +10,7 @@ i.e. array's length for sorting whole array*/
 /*expected call for the function is as follows:
 quickSort(array, 0, array.length -1);*/
 
-function quickSort(a, low, high) {
+export function quickSort(a, low, high) {
   var i = low;
   var j = high;
   var temp;
