@@ -11,7 +11,7 @@ using System;
 
 namespace Average
 {
-    class Program
+    static class Program
     {
         public static void Main(string[] argv)
         {

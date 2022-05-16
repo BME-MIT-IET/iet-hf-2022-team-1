@@ -55,7 +55,9 @@ namespace ConsoleApplicationQSort
 
 		public void Sort(int L, int U)
 		{
-			if (L >= U) return;
+			if (L >= U) {
+				return;
+			}
 			int p = Partition(L, U);
 			Sort(L, p-1);
 			Sort(p + 1, U);

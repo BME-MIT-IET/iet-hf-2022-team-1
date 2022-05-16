@@ -6,7 +6,7 @@ using System.Collections.Generic;
 // representation 
 public class Graph 
 { 
-	private int V; // No. of vertices 
+	private readonly int V; // No. of vertices 
 
 	// Array of lists for Adjacency List Representation 
 	private List<int> []adj; 

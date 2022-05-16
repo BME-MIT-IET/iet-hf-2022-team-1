@@ -2,7 +2,7 @@
 
 using System;
 
-class cosmos {
+static class cosmos {
 
 	/* Function to get minimum number of */
 	/* trials needed in worst case with n */
@@ -36,8 +36,9 @@ class cosmos {
 		for (x = 1; x <= k; x++) {
 			res = Math.Max(eggDrop(n - 1, x - 1),
 						eggDrop(n, k - x));
-			if (res < min)
+			if (res < min){
 				min = res;
+			}
 		}
 
 		return min + 1;

@@ -19,7 +19,7 @@ namespace FractionalKnapsack
     }
 
 
-   public class FractionalKnapsack
+   public static class FractionalKnapsack
     {
 
         // Custom comparison function to sort Items according to val/weight ratio

@@ -97,10 +97,12 @@ namespace Cosmos
 			var current = Root;
 			foreach (char c in word)
 			{
-				if (current.Children.TryGetValue(c, out TrieNode node))
+				if (current.Children.TryGetValue(c, out TrieNode node)){
 					current = node;
-				else
+				}
+				else{
 					return false;
+				}
 			}
 
 			return current.IsCompleteWord;
@@ -108,7 +110,9 @@ namespace Cosmos
 
 		public bool SearchPrefix(string prefix)
 		{
-			if (string.IsNullOrWhiteSpace(prefix)) return false;
+			if (string.IsNullOrWhiteSpace(prefix)){
+				return false;
+			}
 
 			var current = Root;
 			foreach (char c in prefix)

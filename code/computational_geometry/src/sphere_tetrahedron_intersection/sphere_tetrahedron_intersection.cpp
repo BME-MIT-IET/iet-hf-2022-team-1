@@ -87,13 +87,8 @@ public:
     double solidAngleFull;
 
     // Constructor
-    ObservationTetrahedron(const Vec3& vR, const Vec3& vA, const Vec3& vB, const Vec3& vC)
+    ObservationTetrahedron(const Vec3& vR, const Vec3& vA, const Vec3& vB, const Vec3& vC):posR(vR),posA(vA),posB(vB),posC(vC)
     {
-        posR = vR;
-        posA = vA;
-        posB = vB;
-        posC = vC;
-
         Vec3 AmR = vA - vR;
         Vec3 BmR = vB - vR;
         Vec3 CmR = vC - vR;

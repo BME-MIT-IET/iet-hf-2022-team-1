@@ -12,7 +12,7 @@ namespace ConsoleApplication1
     {
         static void Main(string[] args)
         {
-            int[] arr = new int[5] { 83, 12, 3, 34, 60 };
+            var arr = new [] { 83, 12, 3, 34, 60 };
             int i;
             Console.WriteLine("The Array is :");
             for (i = 0; i < 5; i++)
@@ -22,8 +22,9 @@ namespace ConsoleApplication1
             InsertionSort(arr, 5);
             Console.WriteLine("The Sorted Array is :");
             
-            for (i = 0; i < 5; i++)
+            for (i = 0; i < 5; i++){
                 Console.WriteLine(arr[i]); 
+            }
             Console.ReadLine();
         }  
          
@@ -46,7 +47,9 @@ namespace ConsoleApplication1
                         j--;
                         data[j + 1] = item;
                     }
-                    else ins = 1;
+                    else{
+                        ins = 1;
+                    }
                 }
             }
         }

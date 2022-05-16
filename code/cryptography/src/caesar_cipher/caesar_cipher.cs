@@ -9,7 +9,7 @@
 using System.IO;
 using System;
 
-class Program
+static class Program
 {
     const int NUM_ALPHABETS = 26;
     static char addValue(char character, int valueToShiftBy){

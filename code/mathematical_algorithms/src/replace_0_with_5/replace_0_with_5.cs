@@ -2,7 +2,7 @@ using System;
 
 namespace Replace
 {
-    public class Program
+    public static class Program
     {
         private static string replace(string number)
         {

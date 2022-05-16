@@ -77,8 +77,9 @@ namespace CS
         }
 
         static void Sort(ref int[] arr, int left, int right) {
-            if (left >= right)
+            if (left >= right){
                 return;
+            }
 
             int medianIdx = SelectKth(ref arr, 1 + (right - left) / 2, left, right);
             int mid = (right + left) / 2;

@@ -56,7 +56,7 @@ class SinglyLinkedList<T> {
 	}
 
 	public String toString() {
-		String s = new String();
+		String s;
 		Node current = head;
 		while (current != null) {
 			s += current.getValue() + " -> ";

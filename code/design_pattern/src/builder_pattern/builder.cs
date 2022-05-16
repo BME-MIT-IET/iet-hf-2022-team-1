@@ -40,9 +40,6 @@ namespace SandBox
 	class MotorCycleManufacturer : Manufacturer
 	{
 		public string ManufacturerName = "MotorCycle";
-		public MotorCycleManufacturer()
-		{
-		}
 
 		public override Vehicle BuildVehicle()
 		{

@@ -43,8 +43,9 @@ public static class Program
 		for(int i = 0; i < holes.Length; i++) { holes[i] = new List<int>(); }
 		
 		// For every value in the array, put it in the corresponding pigeonhole
-		for (int i = 0; i < arr.Length; i++)
-		    holes[arr[i]-min].Add(arr[i]);
+		for (int i = 0; i < arr.Length; i++){
+			holes[arr[i]-min].Add(arr[i]);
+		}
 		
 		// Finally, replace the values in the array with the values from each
 		// pigeonhole in order

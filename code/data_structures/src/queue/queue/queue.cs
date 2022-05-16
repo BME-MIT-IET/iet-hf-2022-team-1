@@ -122,7 +122,7 @@ namespace Cosmos_Data_Structures
     }
 
     //Stack testing methods/class.
-    public class QueueTest
+    public static class QueueTest
     {
         static void Main(string[] args)
         {

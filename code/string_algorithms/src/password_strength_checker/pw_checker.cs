@@ -6,7 +6,7 @@ using System.Linq;
  * */
 namespace password_strength_check
 {
-    class Program
+    static class Program
     {
         static bool chk_strength(string password)
         {
