@@ -10,6 +10,7 @@
     "code_coverage_sorting": "c8 npm run test_sorting"
   },
   "c8": {
+    "all": "true",
     "extension": [
       ".js"
     ],
@@ -17,8 +18,8 @@
       "text",
       "html"
     ],
-    "exclude": [
-      ".\\code\\sorting\\test\\bubble_sort\\*.js"
+    "src": [
+      ".\\code\\sorting\\src\\"
     ]
   }
 }
