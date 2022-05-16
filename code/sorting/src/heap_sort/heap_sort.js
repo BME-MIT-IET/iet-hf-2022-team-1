@@ -30,7 +30,7 @@ function swap(inputArray, index_A, index_B) {
   inputArray[index_B] = temp;
 }
 
-function heapSort(inputArray) {
+export function heapSort(inputArray) {
   arrayLength = inputArray.length;
 
   for (var i = Math.floor(arrayLength / 2); i >= 0; i -= 1) {
