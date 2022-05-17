@@ -39,7 +39,7 @@ namespace hashtables
         {
             if (hashtable.ContainsKey(key))
             {
-                Console.WriteLine("Deleted value : " + hashtable[key].ToString());
+                Console.WriteLine("Deleted value : " + hashtable[key]);
                 hashtable.Remove(key);
             }
             else
@@ -51,7 +51,7 @@ namespace hashtables
         {
             foreach(var keyValue in hashtable.Keys)
             {
-                Console.WriteLine(keyValue.ToString() + " : " + hashtable[keyValue]);
+                Console.WriteLine(keyValue + " : " + hashtable[keyValue]);
             }
         }
 
