@@ -26,7 +26,7 @@ public class PerimeterTriangle {
                 break;
             }
         }
-        if(flag==false){
+        if(!flag){
             System.out.println("-1");
         }
 }

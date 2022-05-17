@@ -19,10 +19,10 @@ public class atbash_cipher {
 		for(int i = 0; i < s.length(); i++) {
 			alpha = s.charAt(i);
 		
-			if(Character.isUpperCase(alpha) == true ) { 
+			if(Character.isUpperCase(alpha) ) { 
 				n[i] = (char) ('Z' - ( alpha - 'A' ));
 		
-			} else if(Character.isLowerCase(alpha) == true ) {
+			} else if(Character.isLowerCase(alpha) ) {
 				n[i] = (char) ( 'z' -( alpha - 'a' ));
 		
 			} else { 

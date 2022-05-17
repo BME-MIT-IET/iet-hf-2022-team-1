@@ -234,7 +234,7 @@ public class Hashing {
 						g[word.getPositionInGFirst()][2] = 1;
 						g[word.getPositionInGLast()][2] = 1;
 						//recursively call cichelli method
-						if (cichelli(keyWordStack, hashTable, g, modValue, maxValue) == true)	{
+						if (cichelli(keyWordStack, hashTable, g, modValue, maxValue))	{
 							return true;
 						}
 						//detach the hash value for word
@@ -321,14 +321,12 @@ public class Hashing {
 	
 	//overloaded hash function takes Key data type as an argument		
 	public static int hashFunction(Key keyWord, int gFirst, int gLast, int modValue)	{
-		int hashValue = (keyWord.getKeyWord().length() + gFirst + gLast) % modValue;
-		return hashValue;
+		return (keyWord.getKeyWord().length() + gFirst + gLast) % modValue;
 	}
 	
 	//overloaded hash function takes String data type as an argument.
 	public static int hashFunction(String word, int gFirst, int gLast, int modValue)	{
-		int hashValue = (word.length() + gFirst + gLast) % modValue;
-		return hashValue;
+		return (word.length() + gFirst + gLast) % modValue;
 	}
 	
 	//this method initializes the keyWordCounter array with zeros.

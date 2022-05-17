@@ -11,14 +11,14 @@ public class erathosthenes{
 			checkPrime[i] = true;
 		}
 		for(int i=a ; i*i<=n ; i++){           //outer for loop is to check whether a particular element has been marked, if no then it is taken
-			if(checkPrime[i] == true){
+			if(checkPrime[i]){
 				for(int j=i*2 ; j<=n ; j=j+i){  // inner for loop marks the multiples of the element selected by the outer for loop
 					checkPrime[j] = false;
 				}
 			}
 		}
 		for(int i=2 ; i<=n ; i++){
-			if(checkPrime[i] == true)
+			if(checkPrime[i])
 				System.out.println(i+" ");
 		}
 	}

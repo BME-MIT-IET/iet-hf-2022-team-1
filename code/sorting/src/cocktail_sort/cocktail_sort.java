@@ -23,7 +23,7 @@ class CocktailSort {
                 }
             }
 
-            if (swapped == false) {
+            if (!swapped) {
                 break;
             }
 
