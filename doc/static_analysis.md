@@ -10,7 +10,7 @@ Ezután a Codacy nevű statikus analízis tool és a SonarLint használata melle
 
  - Következő lépésben a **Rename 'key' which hides the field with the same name.** jelzésű problémákat javítottam, viszont ezen ponton belefutottam abba a hibába hogy elkezdtem triviális kód stílus hibákat javítani, amiből rengeteget jeleznek az analízisek, ezért ezzel egy idő után felhagytam mivel reménytelen minden jelzett hibát kijavítani egy ilyen méretű projektben.
 
- - Ezután olyan hibajelzéseket főleg java fájlokban végeztem javításokat olyan kódok refaktorálásával amire a Codacy és SonarLint is találatot dobott. Többek között
+ - Ezután főleg java fájlokban végeztem javításokat olyan kódok refaktorálásával amire a Codacy és SonarLint is találatot dobott. Többek között:
   > Use equals() to compare object references.
 
   > Avoid unnecessary if..then..else statements when returning booleans
