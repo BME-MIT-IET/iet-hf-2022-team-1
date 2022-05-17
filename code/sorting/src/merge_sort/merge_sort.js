@@ -28,4 +28,4 @@ function merge(left, right) {
   return result;
 }
 
-console.log(mergeSort(a));
+//console.log(mergeSort(a));

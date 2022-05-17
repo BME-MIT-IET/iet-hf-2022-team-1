@@ -1,8 +1,9 @@
 // Part of Cosmos by OpenGenus Foundation
+package code.sorting.src.comb_sort;
 
 import java.util.Scanner;
 
-public class CombSort
+public class comb_sort
 {
     public static void main(String[] args)
     {
@@ -17,7 +18,7 @@ public class CombSort
             a[i] = sc.nextInt();
         }
         System.out.println("Sorted array is :");
-        CombSort cs = new CombSort(a);
+        comb_sort cs = new comb_sort(a);
         for (i = 0; i < size; i++)
         {
             System.out.printf("%d\t", a[i]);
@@ -25,7 +26,7 @@ public class CombSort
     }
     private final int[] a;
 
-    private CombSort(int[] b)
+    public comb_sort(int[] b)
     {
         this.a = b;
         combSort(a.length);

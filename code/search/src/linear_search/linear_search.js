@@ -9,7 +9,7 @@
  *              var index = linearSearch([1, 2, 3, 4, 7, 8], 8);
  *
  */
-function linearSearch(arr, element) {
+export function linearSearch(arr, element) {
   for (var i = 0; i < arr.length; i++) {
     if (arr[i] === element) {
       return i;

@@ -1,13 +1,13 @@
 /* Part of Cosmos by OpenGenus Foundation */
-
+package code.sorting.src.bubble_sort;
 import java.util.Arrays;
 
 /**
  * Implements the bubble sort sorting algorithm
  */
-public class BubbleSort {
+public class bubble_sort {
 
-	static void bubbleSort(int[] array) {
+	public static void bubbleSort(int[] array) {
 		int flag = 1;
 		for (int i = 0; i < array.length - 1; i++) {
 			flag = 1;
