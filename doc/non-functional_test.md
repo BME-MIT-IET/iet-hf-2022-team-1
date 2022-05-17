@@ -1,5 +1,4 @@
 # Nem-funkcionális tesztek eredményei
-
 ## Sudoku-solver
 ### Használhatóság
 
@@ -17,3 +16,11 @@ Az algoritmus teljesítményének a mérésére az algoritmus futási idejét vi
 Különböző nehézségű és nagyságú sudokuk esetében mértem a lefutási időt.
 A lefutási idő különböző nehézségű sudokuk esetében alig észrevehető, viszont minnél kisebb méretű az adott sudoku annál gyorsabban fut le az algoritmus.
 Mivel a 9x9es méret a legnagyobb ami megadható, így az algoritmus lefutási ideje mindig rövid.
+
+## Bead sort
+
+### Használhatóság
+
+A tesztekhez felhasználtam a könyvtár által tartalmazott példakódot kisebb módosításokkal.
+A teszt eredménye alapján megállapítottam, hogy az algoritmus felhasználható.
+Ez az algoritmus feltételezi, hogy pozitív számokat rendez, a negatív inputokat kicseréli 0-ra így az algoritmus nem dob hibát.
