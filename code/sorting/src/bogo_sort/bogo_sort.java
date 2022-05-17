@@ -27,11 +27,13 @@ public class Bogosort {
             }
         }
         return true;
-    };
+    }
 
     public static Integer[] shuffle(Integer[] arr) {
         String[] strArr = new String[arr.length];
-        Integer count = arr.length, temp, index;
+        Integer count = arr.length;
+        Integer temp;
+        Integer index;
 
         while (count > 0) {
             index = (int)(Math.random() * count);

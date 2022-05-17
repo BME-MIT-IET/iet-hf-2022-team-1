@@ -107,9 +107,12 @@ class PersistentTreap<T : Comparable<T>>(private val root: TreapNode<T>? = null)
                 currentNode.cloneReplaceRight(insert(currentNode.rightChild, value))
         )
     }
+    private fun isLeaf(currentNode: TreapNode<T>?, value: T) :Boolean{
+        return (currentNode?.leftChild == null && currentNode?.rightChild == null && currentNode?.value == value)
+    }
 
     private fun remove(currentNode: TreapNode<T>?, value: T): TreapNode<T>? {
-        if (currentNode == null || (currentNode.leftChild == null && currentNode.rightChild == null && currentNode.value == value))
+        if (currentNode == null || isLeaf(currentNode, value))
             return null
         return when {
             value < currentNode.value -> currentNode.cloneReplaceLeft(remove(currentNode.leftChild, value))
