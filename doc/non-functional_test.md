@@ -5,7 +5,15 @@
 
 A probléma megoldásához felhasználtam a könyvtár által tartalmazott példakódot kisebb módosításokkal.
 A használhatóság ellenőrzésére először egy 9x9-es sudoku táblával próbáltam ki az algoritmust, ami megfelelően le is futott.
-Mivel az algoritmus integer típúsú 2D listát vár így nem is tudunk megadni negatív, illetve nem egész értékeket.
 Miután egy kész sudokut adtam oda az algoritmusnak helyesen nem kezdett vele semmit.
 Ha egy érvénytelen sudoku táblát adunk oda a programnak akkor helyesen jelzi, hogy az adott sudoku nem megoldható, viszont egy kész, hibás sudokura már nem jelzi, hogy az adott sudoku érvénytelen.
-Ettől a problémától eltekintve az algoritmus jól használható.
+Továbbá az algoritmusban nincs lekezelve az, ha negatív számot is tartalmaz a lista. Úgy fut le mintha az a szám nemnegatív lenne.
+A negatívumok közés orolható az a tény is, hogy az algoritmus nem hasznbálható 16x16-os sudoku rejtvények megoldására és 6x6-os sudokure sem működik, mivel az algoritmus feltételezi azt, hogy az összetartozó mezők négyzetek.
+Ezektől a problémáktól eltekintve az algoritmus jól használható.
+
+### Teljesítmény
+
+Az algoritmus teljesítményének a mérésére az algoritmus futási idejét vizsgáltam.
+Különböző nehézségű és nagyságú sudokuk esetében mértem a lefutási időt.
+A lefutási idő különböző nehézségű sudokuk esetében alig észrevehető, viszont minnél kisebb méretű az adott sudoku annál gyorsabban fut le az algoritmus.
+Mivel a 9x9es méret a legnagyobb ami megadható, így az algoritmus lefutási ideje mindig rövid.
