@@ -130,7 +130,7 @@ namespace Cosmos_Data_Structures
         {
             Dequeue(stream,int.MaxValue);
         }
-        public int Dequeue(Stream stream, long maxSize = int.MaxValue)
+        public int Dequeue(Stream stream, long maxSize)
         {
             if (_size == 0)
                 return 0; // It's okay to be empty
