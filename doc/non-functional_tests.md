@@ -24,3 +24,19 @@ Mivel a 9x9es méret a legnagyobb ami megadható, így az algoritmus lefutási i
 A tesztekhez felhasználtam a könyvtár által tartalmazott példakódot kisebb módosításokkal.
 A teszt eredménye alapján megállapítottam, hogy az algoritmus felhasználható.
 Ez az algoritmus feltételezi, hogy pozitív számokat rendez, a negatív inputokat kicseréli 0-ra így az algoritmus nem dob hibát.
+
+### Teljesítmény
+
+[Lásd itt.](#Nem-funkcionális-tesztek-eredményei)
+
+## A tesztelt rendező algoritmusok összehasonlítása
+
+### Teljesítmény
+
+A különböző algoritmusok futási idejét az alábbi grafikonon szemléltettem. Jól látható, hogy a  heap sort és a quicksearch algoritmusok mennyivel gyorsabbak a társaiknál.
+
+![](sorting_time1.png)
+
+Az alábbi grafikon a másik 3 rendező algoritmus futási idejét ábrázolja. Az ábrán megfigyelhető, hogy a beam algoritmus szinte használhatatlan nagyobb listák rendezésére, illetve a Gonome sort minimálisan hatékonyabb a Cocktail sortnál.
+
+![](sorting_time2.png)
