@@ -97,7 +97,11 @@ namespace Cosmos_Data_Structures
         /// <param name="stream">The stream to push</param>
         /// <param name="maxSize">Maximum bytes size for this operation</param>
         /// <returns>Size of pushed bytes</returns>
-        public int Enqueue(Stream stream, long maxSize = int.MaxValue)
+        public int Enqueue(Stream stream)
+        {
+            Enqueue(stream,int.MaxValue);
+        }
+        public int Enqueue(Stream stream, long maxSize)
         {
             if ((_size + BufferBlock) > _array.Length)
             {
@@ -122,6 +126,10 @@ namespace Cosmos_Data_Structures
         /// <param name="stream">The stream to pop</param>
         /// <param name="maxSize">Maximum bytes size for this operation</param>
         /// <returns>Size of popped bytes</returns>
+        public int Dequeue(Stream stream)
+        {
+            Dequeue(stream,int.MaxValue);
+        }
         public int Dequeue(Stream stream, long maxSize = int.MaxValue)
         {
             if (_size == 0)
