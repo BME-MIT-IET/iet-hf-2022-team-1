@@ -37,9 +37,10 @@ namespace OpenGenus
 			var bucketSize = (int)Math.Ceiling(( (max + 1) - min ) / (decimal)bucketCount);
 
 			// add empty buckets
-			for (var i = 0; i < bucketCount; i++)
+			for (var i = 0; i < bucketCount; i++){
 				buckets.Add(new List<int>());
-
+			}
+			
 			// distribute numbers to buckets
 			for (var i = 0; i < unsorted.Length; i++)
 			{

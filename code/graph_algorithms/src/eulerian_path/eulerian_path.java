@@ -55,7 +55,7 @@ class Graph
  
         // Find a vertex with non-zero degree
         for (i = 0; i < V; i++)
-            if (adj[i].size() != 0)
+            if (!adj[i].isEmpty())
                 break;
  
         // If there are no edges in the graph, return true
@@ -67,7 +67,7 @@ class Graph
  
         // Check if all non-zero degree vertices are visited
         for (i = 0; i < V; i++)
-           if (visited[i] == false && adj[i].size() > 0)
+           if (!visited[i] && !adj[i].isEmpty())
                 return false;
  
         return true;
@@ -80,7 +80,7 @@ class Graph
     int isEulerian()
     {
         // Check if all non-zero degree vertices are connected
-        if (isConnected() == false)
+        if (!isConnected())
             return 0;
  
         // Count vertices with odd degree

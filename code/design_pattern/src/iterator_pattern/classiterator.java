@@ -11,10 +11,7 @@ public class ClassIterator implements Iterator<Student> {
 	
 	@Override
 	public boolean hasNext() {
-		if( i < student.length && student[i] != null) 
-			return true;
-		else 
-			return false;
+		return ( i < student.length && student[i] != null);
 	}
 
 	@Override

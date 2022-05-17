@@ -26,12 +26,9 @@ public class BoxStacking {
 
         for (int i = 1; i < T.length; i++) {
             for (int j = 0; j < i; j++) {
-                if (allRotationInput[i].length < allRotationInput[j].length
-                        && allRotationInput[i].width < allRotationInput[j].width) {
-                    if( T[j] + allRotationInput[i].height > T[i]){
-                        T[i] = T[j] + allRotationInput[i].height;
-                        result[i] = j;
-                    }
+                if ((allRotationInput[i].length < allRotationInput[j].length && allRotationInput[i].width < allRotationInput[j].width) && ( T[j] + allRotationInput[i].height > T[i])) {
+                    T[i] = T[j] + allRotationInput[i].height;
+                    result[i] = j;
                 }
             }
         }

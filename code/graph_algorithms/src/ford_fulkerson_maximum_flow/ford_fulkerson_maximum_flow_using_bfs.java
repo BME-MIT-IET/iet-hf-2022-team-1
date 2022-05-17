@@ -24,13 +24,13 @@ class FordFulkersonUsingBfs {
         parent[s]=-1;
  
         // Standard BFS Loop
-        while (queue.size()!=0)
+        while (!queue.isEmpty())
         {
             int u = queue.poll();
  
             for (int v=0; v<V; v++)
             {
-                if (visited[v]==false && rGraph[u][v] > 0)
+                if (!visited[v] && rGraph[u][v] > 0)
                 {
                     queue.add(v);
                     parent[v] = u;
@@ -43,7 +43,7 @@ class FordFulkersonUsingBfs {
          * If we reached sink in BFS starting from source, then
          * return true, else false
          */
-        return (visited[t] == true);
+        return (visited[t]);
     }
 
     // Returns tne maximum flow from s to t in the given graph

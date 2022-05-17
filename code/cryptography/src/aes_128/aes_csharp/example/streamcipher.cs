@@ -43,15 +43,16 @@ namespace AES
             {
                 // If we read less caracters then the size of an AES block,
                 // we fill remaining boxes with zeros.
-                for (i = n; i < AESCipher.BlockSize; ++i)
+                for (i = n; i < AESCipher.BlockSize; ++i){
                     SrcBuff[i] = 0;
+                }
 
-                if (Cipher)
+                if (Cipher){
                     TheCipher.DoCipher(SrcBuff, DestBuff);
-
-                else
+                }
+                else{
                     TheCipher.DoDecipher(SrcBuff, DestBuff);
-
+                }
                 Dest.Write(DestBuff, 0, AESCipher.BlockSize);
             }
         }

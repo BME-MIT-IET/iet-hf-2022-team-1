@@ -4,7 +4,7 @@ using System.Collections.Generic;
 namespace CS
 {
     /* Part of Cosmos by OpenGenus Foundation */
-    class MergeSort
+    static class MergeSort
     {
         private static int[] SortInternal(int[] arr, int start, int count)
         {

@@ -44,13 +44,10 @@ public class CheckCycle
             destination = element;	
 	    while (destination <= number_of_nodes)
 	    {
-                if (adjacencyMatrix[element][destination] == 1 && visited[destination] == 1)
+                if ((adjacencyMatrix[element][destination] == 1 && visited[destination] == 1) && (stack.contains(destination)))
                 {
-                    if (stack.contains(destination))
-                    {	
-                        System.out.println("The Graph contains cycle");
-                        return;	
-                    }
+                    System.out.println("The Graph contains cycle");
+                    return;	
                 }
  
               	if (adjacencyMatrix[element][destination] == 1 && visited[destination] == 0)

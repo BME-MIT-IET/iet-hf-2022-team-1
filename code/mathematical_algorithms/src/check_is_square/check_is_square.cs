@@ -38,7 +38,7 @@ namespace finding_is_square
             }
         }
     }
-    class Program
+    static class Program
     {
         static void Main(string[] args)
         {

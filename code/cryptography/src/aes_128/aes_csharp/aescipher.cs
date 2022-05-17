@@ -74,7 +74,7 @@ namespace AES
         protected void MixColumns(byte[][] State)
         {
             byte[][] buff = new byte[4][];
-            int i, j;
+            int i;
 
             for(i = 0; i < 4; ++i)
             {

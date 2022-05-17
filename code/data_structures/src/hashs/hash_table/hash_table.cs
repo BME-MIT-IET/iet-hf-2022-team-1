@@ -13,7 +13,7 @@ namespace hashtables
 {
     sealed class hTable // a class
     {
-        static int key; // key of the hastable
+        int key; // key of the hastable
         public bool uniqueness { get; set; } // setting to check if allow uniqueness or not
         Hashtable hashtable = new Hashtable();
         internal void add(string value)
@@ -39,7 +39,7 @@ namespace hashtables
         {
             if (hashtable.ContainsKey(key))
             {
-                Console.WriteLine("Deleted value : " + hashtable[key].ToString());
+                Console.WriteLine("Deleted value : " + hashtable[key]);
                 hashtable.Remove(key);
             }
             else
@@ -49,9 +49,9 @@ namespace hashtables
         }
         internal void show()
         {
-            foreach(var key in hashtable.Keys)
+            foreach(var keyValue in hashtable.Keys)
             {
-                Console.WriteLine(key.ToString() + " : " + hashtable[key]);
+                Console.WriteLine(keyValue + " : " + hashtable[keyValue]);
             }
         }
 

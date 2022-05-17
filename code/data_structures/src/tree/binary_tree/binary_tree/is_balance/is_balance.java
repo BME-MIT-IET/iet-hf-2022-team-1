@@ -29,14 +29,10 @@ class BinaryTree
         /* Get the height of left and right sub trees */
         lh = height(node.left);
         rh = height(node.right);
-  
-        if (Math.abs(lh - rh) <= 1
-                && isBalanced(node.left)
-                && isBalanced(node.right)) 
-            return true;
-  
-        /* If we reach here then tree is not height-balanced */
-        return false;
+
+        /* If returns false then tree is not height-balanced */
+        return (Math.abs(lh - rh) <= 1 && isBalanced(node.left) && isBalanced(node.right));
+        
     }
   
     /* UTILITY FUNCTIONS TO TEST isBalanced() FUNCTION */

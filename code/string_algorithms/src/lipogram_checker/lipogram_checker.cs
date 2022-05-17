@@ -31,8 +31,9 @@ namespace lipogram_checker
 
             int val = lipogram(to_chk);
 
-            if (val == 0)
+            if (val == 0){
                 Console.WriteLine("Pangram");
+            }
             else if (val >= 2)
                 Console.WriteLine("Not a pangram but might a lipogram");
             else

@@ -4,7 +4,7 @@
 */
 public class RatMaze
 {
-    final int N = 4;
+    static final int N = 4;
  
     /* A function to print solution matrix
        sol[N][N] */
@@ -36,7 +36,7 @@ public class RatMaze
             {0, 0, 0, 0}
         };
  
-        if (solveMazeUtil(maze, 0, 0, sol) == false)
+        if (!solveMazeUtil(maze, 0, 0, sol))
         {
             System.out.print("Solution doesn't exist");
             return false;
@@ -57,7 +57,7 @@ public class RatMaze
         }
  
         // Check if maze[x][y] is valid
-        if (isSafe(maze, x, y) == true)
+        if (isSafe(maze, x, y))
         {
             // mark x,y as part of solution path
             sol[x][y] = 1;

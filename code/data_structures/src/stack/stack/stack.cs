@@ -79,21 +79,22 @@ namespace Cosmos_Data_Structures
         public override string ToString()
         {
             Node tmp = top;
-            string result = "Stack([Top] ";
+            StringBuilder bld = new StringBuilder();
+            bld.Append("Stack([Top] ");
 
             while(tmp != null)
             {
-                result += tmp.data;
+                bld.Append(tmp.data);
                 tmp = tmp.next;
 
                 if(tmp != null)
                 {
-                    result += " -> ";
+                    bld.Append(" -> ");
                 }
             }
 
-            result += ")";
-            return result;
+            bld.Append(")")
+            return bld.ToString();
         }
     }
 

@@ -44,12 +44,8 @@ class HamiltonCycle {
 
         // Check if all vertices have been included
         if (pos == NO_VER) {
-
             // Check if there is an edge from the last vertex to the source vertex
-            if (graph[path[pos - 1]][path[0]] == 1)
-                return true;
-            else
-                return false;
+            return (graph[path[pos - 1]][path[0]] == 1);
         }
 
         // Try different vertices as a next vertex
@@ -60,7 +56,7 @@ class HamiltonCycle {
                 path[pos] = v;
 
                 // Construct rest of the path
-                if (findHamCycle(graph, path, pos + 1) == true)
+                if (findHamCycle(graph, path, pos + 1) )
                     return true;
 
                 // If adding vertex v doesn't lead to a solution, then remove it
@@ -81,7 +77,7 @@ class HamiltonCycle {
 
         //Set source
         path[0] = 0;
-        if (findHamCycle(graph, path, 1) == false) {
+        if (!findHamCycle(graph, path, 1)) {
             System.out.println("\nSolution does not exist!");
             return 0;
         }

@@ -17,7 +17,6 @@ namespace Cosmos
 		[Fact]
 		public void TestCreation()
 		{
-			//var words = new[] {"abc", "abgl", "cdf", "abcd", "lmn"};
 			var words = new[] {"abc", "abgl"};
 
 			TrieNode root = _trieBuilder.BuildTrie(words);
@@ -98,10 +97,12 @@ namespace Cosmos
 			var current = Root;
 			foreach (char c in word)
 			{
-				if (current.Children.TryGetValue(c, out TrieNode node))
+				if (current.Children.TryGetValue(c, out TrieNode node)){
 					current = node;
-				else
+				}
+				else{
 					return false;
+				}
 			}
 
 			return current.IsCompleteWord;
@@ -109,7 +110,9 @@ namespace Cosmos
 
 		public bool SearchPrefix(string prefix)
 		{
-			if (string.IsNullOrWhiteSpace(prefix)) return false;
+			if (string.IsNullOrWhiteSpace(prefix)){
+				return false;
+			}
 
 			var current = Root;
 			foreach (char c in prefix)

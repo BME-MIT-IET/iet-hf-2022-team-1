@@ -126,7 +126,7 @@ public class Conway extends JFrame {
 	}
 	public class Listen implements ActionListener {
 		public void actionPerformed(ActionEvent ae) {
-			if (ae.getSource() == toggle){
+			if (ae.getSource().equals(toggle)){
 				if (kill == 0) {
 					toggle.setText("Start");
 					kill = 1;
@@ -138,13 +138,13 @@ public class Conway extends JFrame {
 					t.start();
 				}
 			}
-			else if (ae.getSource() == wow) {
+			else if (ae.getSource().equals(wow)) {
 				for (int i = 0;i<size;i++) {
 					grid[size/2][i].setBackground(Color.BLACK);
 					grid_num[size/2][i] = 1;
 					}
 				}
-			else if (ae.getSource() == gun) {
+			else if (ae.getSource().equals(gun)) {
 				int i_fill[] = {4, 4, 5, 5, 2, 2, 3, 4, 5, 6, 7, 8, 8, 5, 3, 4, 5, 6, 5, 2, 3, 4 , 2, 3, 4, 1, 5, 0, 1, 5, 6, 2, 2, 3, 3,7};
 				int j_fill[] = {0,1,0,1,12,13,11,10,10,10,11,12,13,14,15,16,16,16,17,20,20,20,21,21,21,22,22,24,24,24,24,34,35,34,35, 15};
 				int shift = 4;
@@ -153,20 +153,20 @@ public class Conway extends JFrame {
 							grid[i_fill[i]][j_fill[i]].setBackground(Color.BLACK);
 						}
 			}
-			else if (ae.getSource() == clear) {
+			else if (ae.getSource().equals(clear)) {
 				for (int i = 0;i<size;i++)
 					for(int j=0;j<size;j++) {
 						grid_num[i][j] = 0;
 						grid[i][j].setBackground(Color.GRAY);
 						}
 			}
-			else if (ae.getSource() == exit) {
+			else if (ae.getSource().equals(exit)) {
 				System.exit(0);
 			}
 			else {
 				for (int i = 0;i<size;i++)
 					for(int j=0;j<size;j++) {
-						if (ae.getSource() == grid[i][j]) {
+						if (ae.getSource().equals(grid[i][j])) {
 							if (grid_num[i][j] == 0) {
 								grid_num[i][j] = 1;
 								grid[i][j].setBackground(Color.BLACK);

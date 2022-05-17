@@ -11,12 +11,11 @@ using System;
 
 namespace Average
 {
-    class Program
+    static class Program
     {
         public static void Main(string[] argv)
         {
             float sum = 0.0f;
-            float n;
             foreach(string num in argv)
             {
                 sum += float.Parse(num);

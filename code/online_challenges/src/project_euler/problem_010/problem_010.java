@@ -35,7 +35,7 @@ public class Solution {
         long sum=0l;
         for(int j=2;j<=2000000;j++)
         {
-            if(checkp(j)==true)
+            if(checkp(j))
             {
                 sum+=j;
             }

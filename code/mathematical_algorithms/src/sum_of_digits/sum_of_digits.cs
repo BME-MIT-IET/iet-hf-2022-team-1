@@ -1,7 +1,7 @@
 //Part of Cosmos by OpenGenus Foundation
 using System;
 
-class MainClass {
+static class MainClass {
   public static int sumDigits(long n) {
       long sum = 0;
       while (n > 0) {

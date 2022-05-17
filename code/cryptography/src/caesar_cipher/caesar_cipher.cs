@@ -9,7 +9,7 @@
 using System.IO;
 using System;
 
-class Program
+static class Program
 {
     const int NUM_ALPHABETS = 26;
     static char addValue(char character, int valueToShiftBy){
@@ -28,19 +28,19 @@ class Program
     }
 
     static string DecryptByCaesarCipher(string stringToEncrypt, int keyToShiftBy){
-        string result = string.Empty;
+        StringBuilder bld = new StringBuilder();
         foreach(var character in stringToEncrypt){
-            result += subtractValue(character, keyToShiftBy);
+            bld.Append(subtractValue(character, keyToShiftBy));
         }
-        return result;
+        return bld.ToString();
     }
 
     static string EncryptByCaesarCipher(string stringToEncrypt, int keyToShiftBy){
-        string result = string.Empty;
+        StringBuilder bld = new StringBuilder();
         foreach(var character in stringToEncrypt){
-            result += addValue(character, keyToShiftBy);
+            bld.Append(addValue(character, keyToShiftBy));
         }
-        return result;
+        return bld.ToString();
     }
 
     static void Main()

@@ -29,7 +29,7 @@ class Problem019 {
                 {
                     // Start at Monday, 1st, 1900
                     counter = (counter % 7) + 1;
-                    if ((monthDays == 1) && (L.get(counter) == "Sun"))
+                    if ((monthDays == 1) && (L.get(counter).equals("Sun")))
                     {
                         System.out.println("month_days = " + monthDays);
                         if( yr != 1900)

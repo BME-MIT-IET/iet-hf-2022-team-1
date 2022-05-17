@@ -12,9 +12,9 @@ namespace ConsoleApplicationQSort
 			var A = new int[] { 9, 8, 7, 6, 5, 4, 3, 2, 1 };
 			var sorter = new QSort<int>(A);
 			sorter.Sort();
-			foreach (var i in sorter.A)
+			foreach (var i in sorter.A){
 				Console.WriteLine(i);
-
+			}
 			Console.Read();
 		}
 	}
@@ -55,7 +55,9 @@ namespace ConsoleApplicationQSort
 
 		public void Sort(int L, int U)
 		{
-			if (L >= U) return;
+			if (L >= U) {
+				return;
+			}
 			int p = Partition(L, U);
 			Sort(L, p-1);
 			Sort(p + 1, U);

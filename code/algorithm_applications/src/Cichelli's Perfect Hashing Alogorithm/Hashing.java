@@ -179,7 +179,7 @@ public class Hashing {
 	//Cichelli's algorithm is called to map key words to the hashTable and is a perfect hashing algorithm.
 	public static boolean cichelli(Stack<Key> keyWordStack, Key [] hashTable, int[][] g, int modValue, int maxValue)	{
 		
-		while(keyWordStack.isEmpty() != true)	{
+		while(!keyWordStack.isEmpty())	{
 		
 			Key word = keyWordStack.pop();
 			
@@ -202,7 +202,7 @@ public class Hashing {
 					//assign hash value to word
 					hashTable[hashFunction(word, g[word.getPositionInGFirst()][0], g[word.getPositionInGLast()][0], modValue)] = word;
 					//recursively call cichelli method
-					if (cichelli(keyWordStack, hashTable, g, modValue, maxValue) == true)	{
+					if (cichelli(keyWordStack, hashTable, g, modValue, maxValue))	{
 						return true;
 					}
 					//detach the hash value for word
@@ -234,7 +234,7 @@ public class Hashing {
 						g[word.getPositionInGFirst()][2] = 1;
 						g[word.getPositionInGLast()][2] = 1;
 						//recursively call cichelli method
-						if (cichelli(keyWordStack, hashTable, g, modValue, maxValue) == true)	{
+						if (cichelli(keyWordStack, hashTable, g, modValue, maxValue))	{
 							return true;
 						}
 						//detach the hash value for word
@@ -321,14 +321,12 @@ public class Hashing {
 	
 	//overloaded hash function takes Key data type as an argument		
 	public static int hashFunction(Key keyWord, int gFirst, int gLast, int modValue)	{
-		int hashValue = (keyWord.getKeyWord().length() + gFirst + gLast) % modValue;
-		return hashValue;
+		return (keyWord.getKeyWord().length() + gFirst + gLast) % modValue;
 	}
 	
 	//overloaded hash function takes String data type as an argument.
 	public static int hashFunction(String word, int gFirst, int gLast, int modValue)	{
-		int hashValue = (word.length() + gFirst + gLast) % modValue;
-		return hashValue;
+		return (word.length() + gFirst + gLast) % modValue;
 	}
 	
 	//this method initializes the keyWordCounter array with zeros.
@@ -339,7 +337,8 @@ public class Hashing {
 	}
 
 	public static void readOtherFile(Scanner data, int g[][], Key[] hashTable, int[] keyWordCounter, int modValue)	{
-		int lineCounter = 0, wordCounter = 0;
+		int lineCounter = 0;
+		int wordCounter = 0;
 		
 		String x;
         String []y;
@@ -372,9 +371,12 @@ public class Hashing {
 	//method compares a token to a key word to see if they are identical.
 	public static void checkForKeyWord(String[] words, int[][] g, Key[] hashTable, int[] keyWordCounter, int modValue)	{
 		for(String word: words)	{
-			char firstLetter = word.charAt(0),  lastLetter = word.charAt(word.length() - 1);
-			boolean firstLetterBool = false, lastLetterBool = false;
-			int firstGvalue = 0, lastGvalue = 0;
+			char firstLetter = word.charAt(0);
+			char lastLetter = word.charAt(word.length() - 1);
+			boolean firstLetterBool = false;
+			boolean lastLetterBool = false;
+			int firstGvalue = 0;
+			int lastGvalue = 0;
 			
 		
 			for(int i = 0; i < g.length; i += 1)	{
@@ -387,7 +389,7 @@ public class Hashing {
 					lastGvalue = g[i][0];
 				}
 			}
-			if (firstLetterBool == true && lastLetterBool == true)	{
+			if (firstLetterBool && lastLetterBool)	{
 				int index = hashFunction(word, firstGvalue, lastGvalue, modValue);
 				if (word.equals(hashTable[index].getKeyWord()))	{
 					keyWordCounter[index] += 1;

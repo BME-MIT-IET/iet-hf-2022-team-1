@@ -53,18 +53,19 @@ namespace AES
         protected void GenRoundKeys(byte[] MainKey, int nk)
         {
             int nr = Helpers.GetAESNbRounds(nk),
-                i, j,
+                i,
                 rk_size = AESCipher.StateNB * (nr + 1);
             uint tmp;
             byte rcon = 0x01;
 
             RoundKeys = new uint[rk_size];
 
-            for(i = 0; i < nk; ++i)
+            for(i = 0; i < nk; ++i){
                 RoundKeys[i] = (uint)((MainKey[i * 4] << 24) +
                                       (MainKey[i * 4 + 1] << 16) +
                                       (MainKey[i * 4 + 2] << 8) +
                                       (MainKey[i * 4 + 3]));
+            }
 
             while(i < rk_size)
             {
@@ -79,8 +80,9 @@ namespace AES
                     rcon = Helpers.X_Time(rcon);
                 }
 
-                else if (nk > 6 && i % nk == 4)
+                else if (nk > 6 && i % nk == 4){
                     tmp = Helpers.SubWord(tmp, AESCipher.SubByte_SBox);
+                }
 
                 RoundKeys[i] = tmp ^ RoundKeys[i - nk];
                 ++i;

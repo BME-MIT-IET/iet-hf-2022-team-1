@@ -25,7 +25,7 @@ public class cocktail_sort {
                 }
             }
 
-            if (swapped == false) {
+            if (!swapped) {
                 break;
             }
 

@@ -61,7 +61,7 @@ public class Longest_Common_Substring {
         // function call  
         String temp = LongestCommonSubstring(string1, string2);
         System.out.println("String1: " + string1 + "\nString2: " + string2 );
-        if(temp == ""){
+        if(temp.equals("")){
             System.out.println("No common Substring");
         }
         else

@@ -1,9 +1,9 @@
 // Part of Cosmos by OpenGenus
-public class LinearSearch
+public static class LinearSearch
 {
     public static void Main(string[] args)
     {
-        int[] items = new int[] { 10, 12, 52, 634, 24, 743, 234, 7, 25, 742, 76, 25};
+        var items = new [] { 10, 12, 52, 634, 24, 743, 234, 7, 25, 742, 76, 25};
     
         int itemToFind = 634;
         int itemIndex = linearSearch(items, itemToFind);

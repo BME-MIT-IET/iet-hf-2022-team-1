@@ -1,9 +1,15 @@
 public class Key implements Comparable<Key> {
     //fields
 	private String keyWord;
-	private char firstLetter, lastLetter;
+	private char firstLetter;
+	private char lastLetter;
 	//unnassignedLetter is used if only one letter(first or last) is not set.
-	private int totalValue, firstLetterValue, lastLetterValue, positionInGFirst, positionInGLast, unassignedLetterPosition;
+	private int totalValue;
+	private int firstLetterValue;
+	private int lastLetterValue;
+	private int positionInGFirst;
+	private int positionInGLast;
+	private int unassignedLetterPosition;
 	
 	//constructor
 	public Key(String keyWord)	{

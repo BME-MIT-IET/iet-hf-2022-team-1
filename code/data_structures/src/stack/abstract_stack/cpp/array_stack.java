@@ -36,14 +36,12 @@ import java.io.*;
 	}
  
 	public boolean isFull() {
-		if (this.size == this.CAP)
-			return false;
-		return true;
+		return this.size==this.CAP;
 	}
  
 	public String toString() {
 		if(this.size == 0)
-			return null;
+			return "";
 		
 		StringBuilder sb = new StringBuilder();
 		for(int i = 0; i < this.size; i++)
@@ -56,7 +54,7 @@ import java.io.*;
 
  class Stack1 {
 	 public static void main(String[] args) { 
-		 Stack<String> stack = new Stack<String>(11);
+		 Stack<String> stack = new Stack<>(11);
 		 stack.push("hello");
 		 stack.push("world");
  		 System.out.println(stack);

@@ -43,8 +43,9 @@ namespace OpenGenus
 						position++;
 
 				// If the item is already there, this is not a cycle.
-				if (position == cycleStart)
+				if (position == cycleStart){
 					continue;
+				}
 
 				// Otherwise, put the item there or right after any duplicates.
 				while (item == array[position])

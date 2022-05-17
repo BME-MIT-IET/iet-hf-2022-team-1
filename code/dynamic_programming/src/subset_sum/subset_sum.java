@@ -31,7 +31,7 @@ class subset_sum
 		int set[] = {3, 34, 4, 12, 5, 7};
 		int sum = 19;
 		int n = set.length;
-		if (isSubsetSum(set, n, sum) == true)
+		if (isSubsetSum(set, n, sum))
 			System.out.println("Subset found");
 		else
 			System.out.println("No subset found");

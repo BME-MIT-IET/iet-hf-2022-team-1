@@ -13,10 +13,10 @@ namespace fcfs
     /// </summary>
     class FCFS
     {
-        int[] processes;  // to store process id
-        int[] bursts;  // to store process
-        int[] ta;      // to store turn arround time
-        int[] wt;      // to store awating time
+        readonly int[] processes;  // to store process id
+        readonly int[] bursts;  // to store process
+        readonly int[] ta;      // to store turn arround time
+        readonly int[] wt;      // to store awating time
         public FCFS(int[] processes,int[] bursts)
         {
             this.processes = processes;
@@ -83,7 +83,7 @@ namespace fcfs
         }
 
     }
-    class Program
+    static class Program
     {
         static void Main(string[] args)
         {

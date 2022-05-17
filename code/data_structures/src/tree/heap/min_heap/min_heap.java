@@ -64,16 +64,7 @@
         private boolean isLeaf(int pos)
 
         {
-
-            if (pos >=  (size / 2)  &&  pos <= size)
-
-            { 
-
-                return true;
-
-            }
-
-            return false;
+            return (pos >=  (size / 2)  &&  pos <= size);
 
         }
 
@@ -99,15 +90,11 @@
 
         {
 
-            if (!isLeaf(pos))
+            if (!isLeaf(pos) && (Heap[pos] > Heap[leftChild(pos)]  || Heap[pos] > Heap[rightChild(pos)]))
 
             { 
 
-                if ( Heap[pos] > Heap[leftChild(pos)]  || Heap[pos] > Heap[rightChild(pos)])
-
-                {
-
-                    if (Heap[leftChild(pos)] < Heap[rightChild(pos)])
+                if (Heap[leftChild(pos)] < Heap[rightChild(pos)])
 
                     {
 
@@ -124,8 +111,6 @@
                         heapify(rightChild(pos));
 
                     }
-
-                }
 
             }
 

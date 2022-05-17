@@ -6,7 +6,7 @@ using System.Collections.Generic;
 // representation 
 public class Graph 
 { 
-	private int V; // No. of vertices 
+	private readonly int V; // No. of vertices 
 
 	// Array of lists for Adjacency List Representation 
 	private List<int> []adj; 
@@ -37,8 +37,9 @@ public class Graph
 		foreach(int i in adj[v]) 
 		{ 
 			int n = i; 
-			if (!visited[n]) 
+			if (!visited[n]){
 				DFSUtil(n, visited); 
+			}
 		} 
 	} 
 

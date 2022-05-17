@@ -8,10 +8,16 @@ import java.io.*;
  
 class Graph
 {
+    int V;
+    int E;    // V-> no. of vertices & E->no.of edges
+    Edge edge[]; // collection of all edges
+    
     // A class to represent a graph edge
     class Edge implements Comparable<Edge>
     {
-        int src, dest, weight;
+        int src;
+        int dest;
+        int weight;
  
         /* Comparator function used for sorting edges 
          * based on their weight 
@@ -23,13 +29,11 @@ class Graph
     };
  
     // A class to represent a subset for union-find
-    class subset
+    class Subset
     {
-        int parent, rank;
+        int parent;
+        int rank;
     };
- 
-    int V, E;    // V-> no. of vertices & E->no.of edges
-    Edge edge[]; // collection of all edges
  
     // Creates a graph with V vertices and E edges
     Graph(int v, int e)
@@ -43,7 +47,7 @@ class Graph
  
     // A utility function to find set of an element i
     // (uses path compression technique)
-    int find(subset subsets[], int i)
+    int find(Subset subsets[], int i)
     {
         // find root and make root as parent of i (path compression)
         if (subsets[i].parent != i)
@@ -54,7 +58,7 @@ class Graph
  
     // A function that does union of two sets of x and y
     // (uses union by rank)
-    void Union(subset subsets[], int x, int y)
+    void union(Subset subsets[], int x, int y)
     {
         int xroot = find(subsets, x);
         int yroot = find(subsets, y);
@@ -76,7 +80,7 @@ class Graph
     }
  
     // The main function to construct MST using Kruskal's algorithm
-    void KruskalMST()
+    void kruskalMST()
     {
         Edge result[] = new Edge[V];  // Tnis will store the resultant MST
         int e = 0;  // An index variable, used for result[]
@@ -90,9 +94,9 @@ class Graph
         Arrays.sort(edge);
  
         // Allocate memory for creating V ssubsets
-        subset subsets[] = new subset[V];
+        Subset subsets[] = new Subset[V];
         for(i=0; i<V; ++i)
-            subsets[i]=new subset();
+            subsets[i]=new Subset();
  
         // Create V subsets with single elements
         for (int v = 0; v < V; ++v)
@@ -120,7 +124,7 @@ class Graph
             if (x != y)
             {
                 result[e++] = next_edge;
-                Union(subsets, x, y);
+                union(subsets, x, y);
             }
             // Else discard the next_edge
         }
@@ -175,6 +179,6 @@ class Graph
         graph.edge[4].dest = 3;
         graph.edge[4].weight = 4;
  
-        graph.KruskalMST();
+        graph.kruskalMST();
     }
 }

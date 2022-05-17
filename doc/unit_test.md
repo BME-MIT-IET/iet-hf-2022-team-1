@@ -41,4 +41,5 @@ A tesztelés során volt egy-két algoritmus ami több figyelmet igényelt mint 
 
 Az egyik ilyen a cycle sort, aminek a könytárban lévő implementációja hibás volt. A függvény végén levő return utasítás eggyel fentebb levő kódblokk végén volt, nem pedig a függvény végén. A problémára a tesztek futtatása során lettünk figyelmesek, a problémát pedig a Cycle sort wikipedia oldalon lévő pszeudokód alapján javítottuk ki.
 
+
 Kiemelendő még a flash sort, ami a tesztelt algoritmusok közül egyedüliként nem ér el 100%-os lefedettséget. Ennek oka, hogy az algoritmus közepén van egy break utasítás egy if feltételben, ami normális körülmények nem érhető el, illetve nehezen érthető az implementáció alapján, hogy mikor futhatna le egyáltalán az utasítás. Ezen okoból nem vettünk fel külön tesztesetet erre az egy utasításra.

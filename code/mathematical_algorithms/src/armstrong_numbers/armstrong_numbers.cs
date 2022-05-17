@@ -12,15 +12,16 @@ namespace armstrong
 {
     class armstrong
     {
-        int number;
+        readonly int number;
         public armstrong(int number)
         {
             this.number = number;
         }
         public bool check()
         {
-            if (number == getcSum())
+            if (number == getcSum()){
                 return true;
+            }
 
             return false;
         }
@@ -41,16 +42,18 @@ namespace armstrong
             return number * number * number;
         }
     }
-    class Program
+    static class Program
     {
         static void Main(string[] args)
         {
             int num = 15;
             armstrong arm = new armstrong(num);
-            if (arm.check())
+            if (arm.check()){
                 Console.WriteLine("{0} is an armstrong number", num);
-            else
+            }
+            else{
                 Console.WriteLine("{0} is not an armstrong number", num);
+            }
 
             Console.ReadKey(); // pauses the program
         }

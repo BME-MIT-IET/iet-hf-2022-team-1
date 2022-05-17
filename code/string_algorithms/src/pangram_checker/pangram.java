@@ -17,12 +17,10 @@ public class Pangram {
             k = 0;
             while(k < sm.length())
                {
-                if(sm.charAt(k) != ' ')
+                if((sm.charAt(k) != ' ') && ((sm.charAt(k) == (char)i) || (sm.charAt(k) == (char)j)))
                 {
-                    if((sm.charAt(k) == (char)i) || (sm.charAt(k) == (char)j)){               
-                        count++;
-                        break;
-                    }
+                    count++;
+                    break;
                 }
                 k++;
             }
