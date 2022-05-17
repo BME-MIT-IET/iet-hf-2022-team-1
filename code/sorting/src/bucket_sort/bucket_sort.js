@@ -15,7 +15,7 @@ function insertionSort(array) {
 }
 
 // Implement bucket sort
-function bucketSort(array, bucketSize) {
+export function bucketSort(array, bucketSize) {
   if (array.length === 0) {
     return array;
   }

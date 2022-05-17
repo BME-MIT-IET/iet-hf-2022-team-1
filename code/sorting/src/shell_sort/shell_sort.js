@@ -1,5 +1,5 @@
 // Part of Cosmos by OpenGenus Foundation
-function shellSort(a) {
+export function shellSort(a) {
   for (var h = a.length; h > 0; h = parseInt(h / 2)) {
     for (var i = h; i < a.length; i++) {
       var k = a[i];

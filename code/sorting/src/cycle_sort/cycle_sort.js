@@ -7,7 +7,7 @@
  * Part of Cosmos by OpenGenus Foundation
  */
 
-const cycleSort = array => {
+export const cycleSort = array => {
   // last record will already be in place
   for (let start = 0; start < array.length - 1; start++) {
     let record = array[start];
@@ -45,9 +45,9 @@ const cycleSort = array => {
       array[pos] = record;
       record = swap;
     }
-
-    return array;
   }
+  
+  return array;
 };
 
 console.log(cycleSort([3, 2, 1, 4]));

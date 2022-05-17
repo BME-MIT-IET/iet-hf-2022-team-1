@@ -1,5 +1,5 @@
 // Part of Cosmos by OpenGenus Foundation
-function insertionSort(array) {
+export function insertionSort(array) {
   var length = array.length;
 
   for (var i = 1; i < length; i++) {

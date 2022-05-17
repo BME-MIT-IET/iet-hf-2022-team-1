@@ -1,5 +1,5 @@
 // Part of Cosmos by OpenGenus Foundation
-function selectionSort(inputArray) {
+export function selectionSort(inputArray) {
   var len = inputArray.length;
   for (var i = 0; i < len; i++) {
     var minAt = i;

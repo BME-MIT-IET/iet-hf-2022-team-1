@@ -1,5 +1,5 @@
 // Part of Cosmos by OpenGenus Foundation
-function countingSort(arr, min, max) {
+export function countingSort(arr, min, max) {
   var i,
     z = 0,
     count = [];

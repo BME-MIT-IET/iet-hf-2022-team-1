@@ -1,4 +1,4 @@
-function gnomeSort(arr) {
+export function gnomeSort(arr) {
   let index = 0;
 
   while (index <= arr.length) {
@@ -8,9 +8,11 @@ function gnomeSort(arr) {
       arr[index - 1] = tmp;
       --index;
     } else {
-      --index;
+      ++index;
     }
   }
+
+  return arr;
 }
 
 // test case

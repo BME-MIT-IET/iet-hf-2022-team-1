@@ -2,7 +2,7 @@
 // Implementation of radix sort in JavaScript
 var testArray = [331, 454, 230, 34, 343, 45, 59, 453, 345, 231, 9];
 
-function radixBucketSort(arr) {
+export function radixBucketSort(arr) {
   var idx1, idx2, idx3, len1, len2, radix, radixKey;
   var radices = {},
     buckets = {},
@@ -64,6 +64,8 @@ function radixBucketSort(arr) {
     }
     buckets = {};
   }
+
+  return arr;
 }
 radixBucketSort(testArray);
 console.dir(testArray);
