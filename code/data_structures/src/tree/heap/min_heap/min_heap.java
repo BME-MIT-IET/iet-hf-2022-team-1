@@ -99,15 +99,11 @@
 
         {
 
-            if (!isLeaf(pos))
+            if (!isLeaf(pos) && (Heap[pos] > Heap[leftChild(pos)]  || Heap[pos] > Heap[rightChild(pos)]))
 
             { 
 
-                if ( Heap[pos] > Heap[leftChild(pos)]  || Heap[pos] > Heap[rightChild(pos)])
-
-                {
-
-                    if (Heap[leftChild(pos)] < Heap[rightChild(pos)])
+                if (Heap[leftChild(pos)] < Heap[rightChild(pos)])
 
                     {
 
@@ -124,8 +120,6 @@
                         heapify(rightChild(pos));
 
                     }
-
-                }
 
             }
 
