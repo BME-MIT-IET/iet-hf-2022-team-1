@@ -7,7 +7,7 @@ A használhatóság ellenőrzésére először egy 9x9-es sudoku táblával pró
 Miután egy kész sudokut adtam oda az algoritmusnak helyesen nem kezdett vele semmit.
 Ha egy érvénytelen sudoku táblát adunk oda a programnak akkor helyesen jelzi, hogy az adott sudoku nem megoldható, viszont egy kész, hibás sudokura már nem jelzi, hogy az adott sudoku érvénytelen.
 Továbbá az algoritmusban nincs lekezelve az, ha negatív számot is tartalmaz a lista. Úgy fut le mintha az a szám nemnegatív lenne.
-A negatívumok közés orolható az a tény is, hogy az algoritmus nem hasznbálható 16x16-os sudoku rejtvények megoldására és 6x6-os sudokure sem működik, mivel az algoritmus feltételezi azt, hogy az összetartozó mezők négyzetek.
+A negatívumok közé sorolható az a tény is, hogy az algoritmus nem hasznbálható 16x16-os sudoku rejtvények megoldására és 6x6-os sudokure sem működik, mivel az algoritmus feltételezi azt, hogy az összetartozó mezők négyzetek.
 Ezektől a problémáktól eltekintve az algoritmus jól használható.
 
 ### Teljesítmény
