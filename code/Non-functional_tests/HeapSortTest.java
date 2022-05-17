@@ -1,6 +1,6 @@
 import java.util.Arrays;
 
-public class BeadSortTest {
+public class HeapSortTest {
     public static void main(String[] args) {
         // UsabilityTest();
         PerformanceTest();
@@ -8,7 +8,8 @@ public class BeadSortTest {
 
     public static void UsabilityTest() {
         int[] arrayToSort = new int[] { 4, 1, 6, 2, 40, 5, 3, 8, 7 };
-        System.out.println(Arrays.toString(BeadSort.beadSort(arrayToSort)));
+        HeapSort.sort(arrayToSort);
+        System.out.println(Arrays.toString(arrayToSort));
     }
 
     public static void PerformanceTest() {
@@ -18,7 +19,7 @@ public class BeadSortTest {
             int[] tmp = generateArray(i * 10000);
 
             timeBeforeTest = System.currentTimeMillis();
-            BeadSort.beadSort(tmp);
+            HeapSort.sort(tmp);
 
             timeAfterTest = System.currentTimeMillis();
 

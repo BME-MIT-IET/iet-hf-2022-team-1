@@ -22,16 +22,53 @@ Mivel a 9x9es méret a legnagyobb ami megadható, így az algoritmus lefutási i
 ### Használhatóság
 
 A tesztekhez felhasználtam a könyvtár által tartalmazott példakódot kisebb módosításokkal.
-A teszt eredménye alapján megállapítottam, hogy az algoritmus felhasználható.
+A teszt eredménye alapján megállapítottam, hogy az algoritmus felhasználható kisebb listákhoz, sok elemű listák rendezésére alkalmazhatatlan.
 Ez az algoritmus feltételezi, hogy pozitív számokat rendez, a negatív inputokat kicseréli 0-ra így az algoritmus nem dob hibát.
 
 ### Teljesítmény
 
-[Lásd itt.](#Nem-funkcionális-tesztek-eredményei)
+[Lásd itt.](#some-id)
+
+## Gnome sort
+
+### Használhatóság
+A tesztekhez felhasználtam a könyvtár által tartalmazott példakódot kisebb módosításokkal.
+A teszt eredménye alapján megállapítottam, hogy az algoritmus hatékonyan működik kis listákra, viszont sok elemű listáknál a futási idő exponenciálisan növekedik.
+Ez az algoritmus a negatív számokat is megfelelően lekezeli.
+### Teljesítmény
+
+[Lásd itt.](#some-id)
+
+## Cocktail sort
+### Használhatóság
+A tesztekhez felhasználtam a könyvtár által tartalmazott példakódot kisebb módosításokkal.
+A teszt eredménye alapján megállapítottam, hogy az algoritmus hatékonyan működik kis listákra, viszont sok elemű listáknál a futási idő exponenciálisan növekedik.
+Ez az algoritmus a negatív számokat is megfelelően lekezeli.
+### Teljesítmény
+
+[Lásd itt.](#some-id)
+
+## Quick sort
+### Használhatóság
+A tesztekhez felhasználtam a könyvtár által tartalmazott példakódot kisebb módosításokkal.
+A teszt eredménye alapján megállapítottam, hogy az algoritmus elképesztően hatékony kis és nagy elemszámú listákra egyaránt.
+Ez az algoritmus a negatív számokat is megfelelően lekezeli.
+### Teljesítmény
+
+[Lásd itt.](#some-id)
+
+## Heap sort
+### Használhatóság
+A tesztekhez felhasználtam a könyvtár által tartalmazott példakódot kisebb módosításokkal.
+A teszt eredménye alapján megállapítottam, hogy az algoritmus elképesztően hatékony kis és nagy elemszámú listákra egyaránt.
+Ez az algoritmus a negatív számokat is megfelelően lekezeli.
+### Teljesítmény
+
+[Lásd itt.](#some-id)
 
 ## A tesztelt rendező algoritmusok összehasonlítása
 
-### Teljesítmény
+### <a name="some-id"></a> Teljesítmény
 
 A különböző algoritmusok futási idejét az alábbi grafikonon szemléltettem. Jól látható, hogy a  heap sort és a quicksearch algoritmusok mennyivel gyorsabbak a társaiknál.
 

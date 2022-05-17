@@ -15,7 +15,7 @@ public class Shuffle_An_Array
 		  array[i] = array[j];
 		  array[j] = temp;
 	  }
-	  System.out.println(Arrays.toString(array));
+	  //System.out.println(Arrays.toString(array));
   }
 public static void main(String[]args)
 {
