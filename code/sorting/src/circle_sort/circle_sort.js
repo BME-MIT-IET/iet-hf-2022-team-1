@@ -1,6 +1,6 @@
 // Reference: https://rosettacode.org/wiki/Sorting_Algorithms/Circle_Sort
 
-const circlesort = (arr, lo, hi, swaps) => {
+export const circlesort = (arr, lo, hi, swaps) => {
   let high;
   let low;
   let mid;

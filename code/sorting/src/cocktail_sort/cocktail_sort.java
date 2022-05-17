@@ -1,9 +1,11 @@
-class CocktailSort {
+package code.sorting.src.cocktail_sort;
+
+public class cocktail_sort {
     /** A method to sort the array. The array will be sorted inplace. 
     * @author KanakalathaVemuru (https://github.com/KanakalathaVemuru)
     * @param array an array which has to be sorted
     */
-    public void sort(int[] array) {
+    public static void sort(int[] array) {
         int n = array.length;
 
         int left = 0;
@@ -50,8 +52,7 @@ class CocktailSort {
         }
         System.out.println();
 
-        CocktailSort cs = new CocktailSort();
-        cs.sort(arr);
+        sort(arr);
 
         System.out.println("\nSorted array");
         for (int i = 0; i < arr.length; i++) {

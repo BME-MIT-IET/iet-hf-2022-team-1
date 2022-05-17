@@ -20,7 +20,7 @@ function determinePrev(arr, idx) {
     }, 0);
 }
 
-function beadsort(arr) {
+export function beadsort(arr) {
   var ref = arr.map(function(x) {
     return range(x);
   });

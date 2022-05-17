@@ -1,7 +1,7 @@
 // Part of Cosmos by OpenGenus Foundation
 
 // Sort a list using shaker sort (bidirectional bubble sort)
-function shaker_sort(list) {
+export function shaker_sort(list) {
   let swapped = false;
   let length = list.length;
 
