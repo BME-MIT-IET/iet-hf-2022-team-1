@@ -52,9 +52,6 @@ class CandyDistribution {
 //this is the number of people who can get candy
             peopleServed += arr[i]/val;
         }
-        if(peopleServed>=k){
-            return true;
-        }
-        return false;
+        return peopleServed>=k;
     }
 }

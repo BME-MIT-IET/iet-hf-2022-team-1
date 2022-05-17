@@ -9,9 +9,7 @@ public class InfixToPostfix {
   * @return true if operator
   */
  private boolean isOperator(char c){
-  if(c == '+' || c == '-' || c == '*' || c =='/' || c == '^')
-   return true;
-  return false;
+   return c == '+' || c == '-' || c == '*' || c =='/' || c == '^';
  }
   
  /**
@@ -21,14 +19,9 @@ public class InfixToPostfix {
   * @return true if c2 has same or higher precedence
   */
  private boolean checkPrecedence(char c1, char c2){
-  if((c2 == '+' || c2 == '-') && (c1 == '+' || c1 == '-'))
-   return true;
-  else if((c2 == '*' || c2 == '/') && (c1 == '+' || c1 == '-' || c1 == '*' || c1 == '/'))
-   return true;
-  else if((c2 == '^') && (c1 == '+' || c1 == '-' || c1 == '*' || c1 == '/'))
-   return true;
-  else
-   return false;
+  return (((c2 == '+' || c2 == '-') && (c1 == '+' || c1 == '-')) 
+  || ((c2 == '*' || c2 == '/') && (c1 == '+' || c1 == '-' || c1 == '*' || c1 == '/')) 
+  || ((c2 == '^') && (c1 == '+' || c1 == '-' || c1 == '*' || c1 == '/')));
  }
   
  /**
@@ -37,12 +30,13 @@ public class InfixToPostfix {
   * @return postfix expression
   */
  public String convert(String infix){
-  System.out.printf("%-8s%-10s%-15s\n", "Input","Stack","Postfix");
+  String format="%-8s%-10s%-15s\n";
+  System.out.printf(format, "Input","Stack","Postfix");
   String postfix = "";  //equivalent postfix is empty initially
   Stack<Character> s = new Stack<>();  //stack to hold symbols
   s.push('#');  //symbol to denote end of stack
  
-  System.out.printf("%-8s%-10s%-15s\n", "",format(s.toString()),postfix);  
+  System.out.printf(format, "",format(s.toString()),postfix);  
  
   for(int i = 0; i < infix.length(); i++){
    char inputSymbol = infix.charAt(i);  //symbol to be processed
@@ -62,13 +56,13 @@ public class InfixToPostfix {
    }
    else
     postfix += inputSymbol;
-   System.out.printf("%-8s%-10s%-15s\n", ""+inputSymbol,format(s.toString()),postfix);  
+   System.out.printf(format, ""+inputSymbol,format(s.toString()),postfix);  
   }
  
   //pops all elements of stack left
   while(s.peek() != '#'){
    postfix += s.pop();
-   System.out.printf("%-8s%-10s%-15s\n", "",format(s.toString()),postfix);  
+   System.out.printf(format, "",format(s.toString()),postfix);  
  
   }
    
