@@ -179,7 +179,7 @@ public class Dijkstra {
 
 	if (origin != null && dest != null) {
 	  T step = goal;
-	  while (origin.id != step) {
+	  while (!origin.id.equals(step)) {
 		this.paths.add(step);
 		step = this.preds.get(step);
 	  }
@@ -227,12 +227,12 @@ public class Dijkstra {
 public static void main(String[] args) {
 
  
-  Vertex<String> v1 = new Vertex<String>("A");
-  Vertex<String> v2 = new Vertex<String>("D");
-  Vertex<String> v3 = new Vertex<String>("E");
-  Vertex<String> v4 = new Vertex<String>("B");
-  Vertex<String> v5 = new Vertex<String>("F");
-  Vertex<String> v6 = new Vertex<String>("C");
+  Vertex<String> v1 = new Vertex<>("A");
+  Vertex<String> v2 = new Vertex<>("D");
+  Vertex<String> v3 = new Vertex<>("E");
+  Vertex<String> v4 = new Vertex<>("B");
+  Vertex<String> v5 = new Vertex<>("F");
+  Vertex<String> v6 = new Vertex<>("C");
 
   v1.addNeighbor(v2, 2);
   v1.addNeighbor(v3, 3);
@@ -258,7 +258,7 @@ public static void main(String[] args) {
   v6.addNeighbor(v4, 6);
   v6.addNeighbor(v5, 7);
 
-  Map<String, Vertex> vertices = new HashMap<String, Vertex>();
+  Map<String, Vertex> vertices = new HashMap<>();
   vertices.put(v1.id, v1);
   vertices.put(v2.id, v2);
   vertices.put(v3.id, v3);
@@ -266,7 +266,7 @@ public static void main(String[] args) {
   vertices.put(v5.id, v5);
   vertices.put(v6.id, v6);
 
-  Graphe<String> graphe = new Graphe<String>(vertices);
+  Graphe<String> graphe = new Graphe<>(vertices);
    System.out.println("GRAPHE :");
    graphe.printGraph();
  
@@ -280,12 +280,12 @@ public static void main(String[] args) {
   /* Integer entries -------------------------------------------*/
   System.out.println();
 
-  Vertex< Integer> I1 = new Vertex<Integer>(1);
-  Vertex<Integer> I2 = new Vertex<Integer>(2);
-  Vertex<Integer> I3 = new Vertex<Integer>(3);
-  Vertex<Integer> I4 = new Vertex<Integer>(4);
-  Vertex<Integer> I5 = new Vertex<Integer>(5);
-  Vertex<Integer> I6 = new Vertex<Integer>(6);
+  Vertex< Integer> I1 = new Vertex<>(1);
+  Vertex<Integer> I2 = new Vertex<>(2);
+  Vertex<Integer> I3 = new Vertex<>(3);
+  Vertex<Integer> I4 = new Vertex<>(4);
+  Vertex<Integer> I5 = new Vertex<>(5);
+  Vertex<Integer> I6 = new Vertex<>(6);
 
   I1.addNeighbor(I2, 2);
   I1.addNeighbor(I3, 3);
@@ -311,7 +311,7 @@ public static void main(String[] args) {
   I6.addNeighbor(I4, 6);
   I6.addNeighbor(I5, 7);
 
-  Map<Integer, Vertex> vertices2 = new HashMap<Integer, Vertex>();
+  Map<Integer, Vertex> vertices2 = new HashMap<>();
   vertices2.put(I1.id, I1);
   vertices2.put(I2.id, I2);
   vertices2.put(I3.id, I3);
@@ -319,7 +319,7 @@ public static void main(String[] args) {
   vertices2.put(I5.id, I5);
   vertices2.put(I6.id, I6);
 
-  Graphe<Integer> graphe2 = new Graphe<Integer>(vertices2);
+  Graphe<Integer> graphe2 = new Graphe<>(vertices2);
   System.out.println("GRAPHE :");
   graphe2.printGraph();
   graphe2.executeOnetoAll(1);

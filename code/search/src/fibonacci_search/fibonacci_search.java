@@ -49,7 +49,7 @@ public class FibonacciSearch {
             } 
         }
 
-        if (fibMinus1 == 1 && array[offset + 1] == key) {
+        if (fibMinus1 == 1 && array[offset + 1].equals(key)) {
             return offset + 1;
         }
 
